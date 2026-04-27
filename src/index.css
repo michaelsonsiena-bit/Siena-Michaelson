@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+  --font-sans: "Epilogue", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif", ui-serif, Georgia, serif;
+
+  --color-stone-50: #fff8ef;
+  --color-surface: #fff8ef;
+  --color-surface-container: #f4ede1;
+  --color-surface-container-low: #faf3e7;
+  --color-surface-container-high: #eee7db;
+  --color-secondary: #815432;
+  --color-on-secondary-container: #7a4e2d;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-stone-900 antialiased font-sans;
+  }
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
